@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: buto-storefront
+    runtime: node
+    repo: https://github.com/vladyn/buto-storefront.git
+    branch: render-deploy
+    plan: standard
+    buildCommand: npm install --legacy-peer-deps && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8000
+      - key: NEXT_PUBLIC_MEDUSA_BACKEND_URL
+        sync: false
+      - key: NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY
+        sync: false
+      - key: NEXT_PUBLIC_DEFAULT_REGION
+        value: dk
+      - key: NEXT_PUBLIC_BASE_URL
+        sync: false

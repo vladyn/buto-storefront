@@ -58,7 +58,7 @@ If you prefer not to use the Blueprint:
 2. Connect `git@github.com:vladyn/buto-storefront.git` and select the `render-deploy` branch.
 3. Set:
    - **Runtime:** Node
-   - **Build Command:** `npm install --legacy-peer-deps && npm run build`
+   - **Build Command:** `npm install --legacy-peer-deps --include=dev && npm run build`
    - **Start Command:** `npm run start`
 4. Add the environment variables listed above.
 
